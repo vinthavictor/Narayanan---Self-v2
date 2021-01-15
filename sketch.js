@@ -234,10 +234,12 @@ function end(){
   fill("black");
   fill("red");
   textSize(60);
-  text("OOPS!!!",900,300)
-  sound2.play();
-  //stopSound("Voice 010.m4a");
-  fill("black");
+  text("OOPS!!!",900,300);
+  if(count === 0){
+    sound2.play();
+    count =2;
+  }    //stopSound("Voice 010.m4a");
+  
 }
 
 function middle(){
@@ -246,10 +248,11 @@ function middle(){
   fill("green");
   textSize(60);
   text("Congratulations!!!",700,300);
- 
-  if(count === 0){
+  count = 3;
+  if(count === 3){
     sound.play();
-    //count =1;
+    count = 4;
+ 
   }
 
   button.mousePressed(Level2);
